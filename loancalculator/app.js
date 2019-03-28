@@ -1,6 +1,16 @@
 // Listen for submit button
 const submit = document.querySelector('#submit');
-submit.addEventListener('click', calculateResults);
+submit.addEventListener('click', function(e) {
+  // Hide results
+  document.querySelector('#results').style.display = 'none';
+
+  // Show the loader gif
+  document.querySelector('#loading').style.display = 'block';
+
+  setTimeout(calculateResults, 1000);
+
+  e.preventDefault();
+});
 
 // Function to calculate results
 function calculateResults(e) {
@@ -20,11 +30,18 @@ function calculateResults(e) {
     monthlyPayment.value = monthly.toFixed(2);
     totalPayment.value = finalAmount.toFixed(2);
     totalInterest.value = (finalAmount - principal).toFixed(2);
+
+    // Hide the loader gif
+    document.querySelector('#loading').style.display = 'none';
+
+    // Show results
+    document.querySelector('#results').style.display = 'block';
   } else {
+    // Hide the loader gif
+    document.querySelector('#loading').style.display = 'none';
+    
     showError('Please check your numbers');
   }
-
-  e.preventDefault();
 }
 
 // Function to show error
