@@ -15,14 +15,15 @@
       <div class="row">
         <div class="col-md-6 mx-auto">
           <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+            <h1 class="heading display-5">Loan Calculator</h1>
+            <h7 class="pb-3">(Compound Interest Calculated Monthly)</h7>
             <form id="loan-form">
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">$</div>
+                    <div class="input-group-text">₹</div>
                   </div>
-                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                  <input type="number" class="form-control" id="principal" placeholder="Loan Principal">
                 </div>
               </div>
               <div class="form-group">
@@ -30,14 +31,19 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text">%</div>
                   </div>
-                  <input type="number" class="form-control" id="interest" placeholder="Interest">
+                  <input type="number" class="form-control" id="interest-rate" placeholder="Rate Of Interest">
                 </div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                      <div class="input-group-text">Yr(s)</div>
+                  </div>
+                  <input type="number" class="form-control" id="time" placeholder="Time To Repay">
+              </div>
               </div>
               <div class="form-group">
-                <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                <input type="submit" value="Calculate" id="submit" class="btn btn-dark btn-block">
               </div>
             </form>
             <!-- Loader -->
@@ -53,6 +59,9 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text">Monthly Payment</div>
                   </div>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">₹</div>
+                  </div>
                   <input type="number" class="form-control" id="monthly-payment" disabled>
                 </div>
               </div>
@@ -61,6 +70,9 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text">Total Payment</div>
                   </div>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">₹</div>
+                  </div>
                   <input type="number" class="form-control" id="total-payment" disabled>
                 </div>
               </div>
@@ -68,6 +80,9 @@
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">Total Interest</div>
+                  </div>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">₹</div>
                   </div>
                   <input type="number" class="form-control" id="total-interest" disabled>
                 </div>
