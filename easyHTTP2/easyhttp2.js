@@ -49,11 +49,11 @@ class EasyHTTP {
     });
   }
 
-  // Make an HTTP PUT Request
+  // Make an HTTP DELETE Request
   delete(url) {
     return new Promise((resolve, reject) => {
       fetch(url, {
-        method: 'PUT',
+        method: 'DELETE',
         headers: {
           'Content-type': 'application/json'
         },
