@@ -14,6 +14,16 @@
       "id": 3,
       "title": "Post Three",
       "body": "This is post three"
+    },
+    {
+      "title": "Next Test Post",
+      "body": "another test post to test the success alert",
+      "id": 5
+    },
+    {
+      "title": "Just Another Test Post",
+      "body": "another test post to test the success alert",
+      "id": 6
     }
   ]
 }
